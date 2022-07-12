@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &711938086829271899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711938086829271897}
+  - component: {fileID: 711938086829271898}
+  - component: {fileID: 711938086829271896}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711938086829271897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711938086829271899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &711938086829271898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711938086829271899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099671c14100ec645bcde4fb58c16eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711938086829271896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711938086829271899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46762ae11514ce7a3d6db6c713044b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  roomSize: {x: 22, y: 10}
+  roomsAmount: 18
+  roomComposition:
+  - walls:
+      UDLRwall: {fileID: 2586399827515732198, guid: 8019ad1fd22b64e4181d3c74dadbecf5, type: 3}
+      UDLwall: {fileID: 6822558592848948928, guid: aaa5061f49968044daf785453e330d23, type: 3}
+      UDRwall: {fileID: 4776552195866071243, guid: 8dd11995f7880f548ac4b6b623de5f6d, type: 3}
+      ULRwall: {fileID: 7705796308613685293, guid: 87141f8c6cc464043941054bba37c64f, type: 3}
+      DLRwall: {fileID: 6339364820072912194, guid: 2edd7ca37a2074945bd9483dbe933a18, type: 3}
+      UDwall: {fileID: 187458925418286982, guid: 73f41d3802f4ebd4daa7bd9d93064a28, type: 3}
+      ULwall: {fileID: 6769065808741526399, guid: ab2e38e6771f18a4e96d775dc1c3d5a9, type: 3}
+      DLwall: {fileID: 8138713888423053190, guid: 42b37a106abc6d84bafa6312b02c9aee, type: 3}
+      URwall: {fileID: 1755696919006301667, guid: 445883c3a81252a4ea7392ccfecbb428, type: 3}
+      DRwall: {fileID: 2334269379836809707, guid: 06eb52e0642cca04db29a31f720ba39b, type: 3}
+      LRwall: {fileID: 8378187650774213479, guid: e94c6d77b107a9e4cbd706f024b3c858, type: 3}
+      Rwall: {fileID: 8016547213034491047, guid: e24239223b060ca44b7c44afadc6176c, type: 3}
+      Lwall: {fileID: 6404954611191984277, guid: bf3e928c24490954fb7b42127170a5da, type: 3}
+      Dwall: {fileID: 2281238564452614324, guid: 476508a0a3edf9b49b23ad51b0fdeea7, type: 3}
+      Uwall: {fileID: 3495054251981835455, guid: 183bb685c9adfee4b9f01cf326a5a13e, type: 3}
+    environment:
+    - decorations: {fileID: 7238151520249215181, guid: 6f2daa596b79dac46947df7d7324d98c, type: 3}
+      spawnPoints: []
+    - decorations: {fileID: 4951163927012955020, guid: 788720a20e7656243bee6c8f4d606c38, type: 3}
+      spawnPoints: []
+    - decorations: {fileID: 8358340394086415431, guid: 9a8e40011b6dabe44827392b4f1fdba4, type: 3}
+      spawnPoints: []
+    floor:
+    - {fileID: 6601753350787465417, guid: 95eb603ab2911784c887e90ef0ab8870, type: 3}
+    enemies:
+    - {fileID: 0}
