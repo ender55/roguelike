@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class FrozenState : IState
 {
     private IMovable movable;
     private FreezeComponent freezeComponent;
-    private Coroutine coroutine = null;
+    private Coroutine coroutine;
 
     public StateMachine StateMachine { get; set; }
 
-    public event Action<IState> StateExit;
-    
     public FrozenState(IMovable movable, FreezeComponent freezeComponent)
     {
         this.movable = movable;
@@ -38,16 +35,10 @@ public class FrozenState : IState
         movable.Movement.MoveSpeed *= 1 - (freezeComponent.slownessPower / 100);
         yield return new WaitForSeconds(freezeComponent.slownessTime);
         StateMachine.DeleteState<FrozenState>();
-        //OnStateExit();
     }
 
     private void Unfreeze()
     {
         movable.Movement.MoveSpeed /= 1 - (freezeComponent.slownessPower / 100);
-    }
-
-    protected virtual void OnStateExit()
-    {
-        StateExit?.Invoke(this);
     }
 }

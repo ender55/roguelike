@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
@@ -22,6 +21,7 @@ public class GameOverUI : MonoBehaviour
 
     private void Update()
     {
+        // TODO: сделать без проверки на каждый кадр
         if (isEndOfGame)
         {
             Restart();

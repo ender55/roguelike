@@ -1,14 +1,13 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraObject : MonoBehaviour, IStateMachine
 {
+    // TODO: поменять тут все
     [SerializeField] private float moveSpeed;
     
     private StateMachine statusMachine = new StateMachine();
-    private Coroutine coroutine = null;
+    private Coroutine coroutine;
     
     public StateMachine StateMachine => statusMachine;
 

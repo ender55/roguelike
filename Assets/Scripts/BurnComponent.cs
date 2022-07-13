@@ -3,6 +3,6 @@
 [Serializable]
 public struct BurnComponent
 {
-    public int burningPower;
+    public int burningDamage;
     public float burningTime;
 }

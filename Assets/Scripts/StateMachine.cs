@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class StateMachine
 {
@@ -12,7 +11,6 @@ public class StateMachine
         {
             states[typeof(T)] = state;
             state.StateMachine = this;
-            //state.StateExit += DeleteState;
             state.Enter();
         }
     }
@@ -60,16 +58,6 @@ public class StateMachine
         if (states.ContainsKey(typeof(T)))
         {
             states[typeof(T)].Exit();
-            states.Remove(typeof(T));
-        }
-    }
-
-    public void DeleteState<T>(T state) where T : IState
-    {
-        if (states.ContainsKey(typeof(T)))
-        {
-            states[typeof(T)].Exit();
-            //state.StateExit -= DeleteState;
             states.Remove(typeof(T));
         }
     }

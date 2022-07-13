@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
     
     protected virtual void OnCollisionEnter2D(Collision2D other)
     {
+        // TODO: сделать так, чтобы пули не наносили урон стрелку и его союзникам 
         if (other.gameObject.TryGetComponent(out Enemy component))
         {
             component.Health.ChangeCurrentHp(-damage);

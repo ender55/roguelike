@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour, IDamageable, IMovable, ITriggerable, IStateMachine
+public class Player : MonoBehaviour, IDamageable, IMovable, IStateMachine
 {
     [SerializeField] private Health health;
     [SerializeField] private DirectionalMovement movement;

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerLookAtMouse : MonoBehaviour
 {
+    // TODO: сделать через IRotatable
     [SerializeField] private new Camera camera;
     
     private Rigidbody2D playerRigidbody;

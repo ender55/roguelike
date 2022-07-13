@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class BurningState : IState
 {
     private IDamageable damageable;
     private BurnComponent burnComponent;
-    private Coroutine coroutine = null;
-
-    public event Action<IState> StateExit;
+    private Coroutine coroutine;
+    
     public StateMachine StateMachine { get; set; }
     
     public BurningState(IDamageable damageable, BurnComponent burnComponent)
@@ -16,7 +14,6 @@ public class BurningState : IState
         this.damageable = damageable;
         this.burnComponent = burnComponent;
     }
-    
 
     public void Enter()
     {
@@ -36,8 +33,8 @@ public class BurningState : IState
     {
         for (int i = 0; i < burnComponent.burningTime * 2; i++)
         {
-            damageable.Health.ChangeCurrentHp(-burnComponent.burningPower);
             yield return new WaitForSeconds(0.5f);
+            damageable.Health.ChangeCurrentHp(-burnComponent.burningDamage);
         }
         StateMachine.DeleteState<BurningState>();
     }

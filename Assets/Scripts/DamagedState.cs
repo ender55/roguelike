@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class DamagedState : IState
@@ -7,8 +6,6 @@ public class DamagedState : IState
     private DamageComponent damageComponent;
     private IDamageable damageable;
     private Coroutine coroutine;
-
-    public event Action<IState> StateExit;
 
     public DamagedState(IDamageable damageable, DamageComponent damageComponent)
     {

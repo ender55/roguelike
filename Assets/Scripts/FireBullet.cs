@@ -8,16 +8,16 @@ public class FireBullet : Bullet
     {
         if (other.gameObject.TryGetComponent(out IDamageable component))
         {
-            if (other.gameObject.TryGetComponent(out IStateMachine statusMachine))
+            if (other.gameObject.TryGetComponent(out IStateMachine stateMachine))
             {
-                if (statusMachine.StateMachine.HasState<BurningState>())
+                if (stateMachine.StateMachine.HasState<BurningState>())
                 {
-                    statusMachine.StateMachine.DeleteState<BurningState>();
-                    statusMachine.StateMachine.SetState(new BurningState(component, burnComponent));
+                    stateMachine.StateMachine.DeleteState<BurningState>();
+                    stateMachine.StateMachine.SetState(new BurningState(component, burnComponent));
                 }
                 else
                 {
-                    statusMachine.StateMachine.SetState(new BurningState(component, burnComponent));
+                    stateMachine.StateMachine.SetState(new BurningState(component, burnComponent));
                 }
             }
         }

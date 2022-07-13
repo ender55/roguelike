@@ -26,7 +26,6 @@ public static class GameLinks
         }
         else
         {
-            //Debug.LogError($"Could not find object by key {typeof(T)}!");
             return new T();
         }
     }
