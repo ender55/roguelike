@@ -13,7 +13,7 @@ public class CameraObject : MonoBehaviour, IStateMachine
 
     private void Start()
     {
-        Screen.SetResolution(1068, 488, false);
+        //Screen.SetResolution(1068, 488, false);
     }
 
     public void LerpMove(Vector3 targetPosition)
